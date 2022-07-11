@@ -1,0 +1,12 @@
+gcloud functions deploy servicenow-bq-sheet-sync-case --region={GCP_REGION} \
+    --entry-point=MAIN \
+    --memory=256MB \
+    --runtime=python38 \
+    --service-account={SA_EMAIL} \
+    --source={GSR_SOURCE_LOCATION} \
+    --timeout=540s \
+    --update-labels=LABELS \
+    --set-env-vars=BQ_DATA_PROJECT={BIGQUERY_DATASET_PROJECT},BQ_USER_PROJECT={BQ_JOB_USER_PROJECT},GOOGLE_SHEET_URL={EXPORT_GOOGLE_SHEET_URL} \
+    --max-instances=2 \
+    --trigger-http \
+    --project={DEPLOYMENT_PROJECT}

@@ -1,0 +1,12 @@
+steps:
+# - name: 'gcr.io/cloud-builders/docker'
+#   args: ['build', '-t', 'gcr.io/$PROJECT_ID/servicenow-table-sync:v0.1-slim', '.']
+#   dir: source/servicenow
+# - name: 'gcr.io/cloud-builders/docker'
+#   args: ['push', 'gcr.io/$PROJECT_ID/servicenow-table-sync:v0.1-slim']
+- name: gcr.io/cloud-builders/gcloud
+  entrypoint: /bin/sh
+  args:
+    - '-c' 
+    - 'chmod 777 ./cloud_build_prod.sh && ./cloud_build_prod.sh'
+  dir: source/bq_sheet_sync_case

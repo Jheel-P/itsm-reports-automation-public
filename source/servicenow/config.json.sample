@@ -1,0 +1,9 @@
+{
+    "instance_uri": "SNOW_INSTANCE_URI",
+    "bq_project": "GCP_BQG_PROJECT",
+    "dataset_id": "BQ_DATASET_ID",
+    "dataset_location": "BQ_DATASET_LOCATION",
+    "dump_gcs_bucket": "GCS_BUCKET_FOR_DATA_DUMP",
+    "dump_gcs_path": "GCS_BUCKET_DUMP_PATH",
+    "credentials_secret_id": "projects/PROJECT_NUMBER/secrets/SNOW_CREDENTIALS_SECRET_ID/versions/latest"
+}
